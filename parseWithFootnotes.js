@@ -1,7 +1,8 @@
 
 let PRINT_HTML = true;
-
+marked.setOptions({gfm: true});
 function parseWithFootnotes(markdown) {
+    return marked.parse(markdown);
     const footnotes = [];
     const newTokens = [];
     const footnoteTest = /^\[\^[^\]]+\]: /;
