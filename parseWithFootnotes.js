@@ -1,3 +1,6 @@
+
+let PRINT_HTML = true;
+
 function parseWithFootnotes(markdown) {
     const footnotes = [];
     const newTokens = [];
@@ -93,6 +96,6 @@ function parseWithFootnotes(markdown) {
     </ol>
     `;
     }
-
+    if(PRINT_HTML) console.log(html);
     return html;
 }
